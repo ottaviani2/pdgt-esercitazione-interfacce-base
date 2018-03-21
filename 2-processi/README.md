@@ -107,8 +107,10 @@ Inserire qui il comando che produce la risposta
 ### 4. Lista delle domande
 
 Considerato che il sorgente di questo file è disponibile all'indirizzo:
-`URL`
-trovare il comando che generi la lista delle domande per la consegna.
+
+`https://raw.githubusercontent.com/DigiPlatMOOC/pdgt-esercitazione-interfacce-base/master/2-processi/README.md`
+
+Trovare il comando che generi la lista delle domande per la consegna.
 
 ```bash
 Inserire qui il comando che produce la risposta
