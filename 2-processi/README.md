@@ -3,7 +3,7 @@
 ## Introduzione
 
 Ogni processo in esecuzione sul proprio sistema operativo ha accesso ad un sistema di input e output tramite il quale può comunicare con il mondo (e gli altri processi in esecuzione).
-In Unix ogni canale di comunicazioe è identificato da un “file descriptor”, un riferimento numerico al canale.
+In Unix ogni canale di comunicazione è identificato da un “file descriptor”, un riferimento numerico al canale.
 I vari canali disponibili vanno dai file (blocchi di dati memorizzati sulla macchina), ai flussi testuali (la riga di comando ad esempio), alle *socket* (delle strutture che permettono di comunicare con altri processi eventualmente in esecuzione su altre macchine remote).
 
 Generalmente ogni processo in esecuzione in ambiente Unix ha 3&nbsp;canali di comunicazione aperti di default:
