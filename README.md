@@ -4,4 +4,5 @@ Tutto il necessario per lo svolgimento di esercitazioni base per interfacce (cod
 
 ## Download toolkit
 
-Toolkit portabile per Windows: [TinyCC](http://download.savannah.gnu.org/releases/tinycc/): compilatore e linker minimale. (Installare toolchain e header WinAPI.)
+Toolkit portabile per Windows, composto da compilatore e linker minimali: [TinyCC](http://download.savannah.gnu.org/releases/tinycc/).
+Scaricare sia toolkit che header Win32, assicurarsi che l'eseguibile `tcc` sia nel *path*.
