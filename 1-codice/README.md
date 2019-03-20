@@ -52,19 +52,3 @@ A questo punto dovremmo ottenere un file eseguibile `test` che possiamo eseguire
 ```bash
 ./test
 ```
-
-## Consegna
-
-Analizzare il file eseguibile con i comandi:
-
-* `objdump -f test`
-* `objdump -t test`
-* `objdump -T test`
-
-L’ultimo comando in particolare elenca la presenza di simboli che vengono “risolti” dinamicamente a runtime, ossia a tempo di esecuzione del programma (generalmente funzioni che non vengono incluse staticamente nel programma durante la compilazione, ma che verranno invocata direttamente nella libreria del runtime&nbsp;C).
-
-Descrivere brevemente le differenze tra gli output sul file eseguibile `test` e sul file oggetto `divide.a`.
-Spiegare come si interpreta la tabella dei simboli dinamici data dall’ultimo comando.
-Spiegare come si interpreta la presenza di simboli che non sono nel proprio codice (ad esempio, `__libc_start_main`).
-
-La risposta può essere consegnata come semplice file di testo o file Markdown in questa cartella (ad esempio, `risposta.md`).
