@@ -19,7 +19,8 @@ Il codice è composto da:
 
 ### 2. Compiliamo la funzione
 
-Per compilare la funzione di divisione, lanciamo il seguente comando
+I seguenti comandi fanno uso di GCC su sistema Unix, ma si può utilizzare `tcc` su Windows in alternativa.
+Per compilare la funzione di divisione, lanciamo il seguente comando:
 
 ```bash
 gcc -c divide.c -o divide.a
