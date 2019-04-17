@@ -3,5 +3,5 @@
 
 int main() {
     int answer = 2 + divide(40, 20);
-    printf("%d\n", answer);
+    printf("2 + 20/40 = %d\n", answer);
 }
