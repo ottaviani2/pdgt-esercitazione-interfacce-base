@@ -1,40 +1,34 @@
-#include <winsock2.h>
-#include <ws2tcpip.h>
 #include <stdio.h>
+#include "socket-lib.h"
 
 #define HOST "127.0.0.1"
-#define PORT 50000
+#define PORT 1234
 
 int main() {
-    WSADATA wsaData;
-    int iResult;
-    
-    iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
-    if (iResult != 0) {
-        printf("WSAStartup failed: %d\n", iResult);
+    if(socket_init() != 0) {
+        fprintf(stderr, "Socket initialization failed\n");
         return 1;
     }
 
-    SOCKET s = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-    if(s == INVALID_SOCKET) {
-        printf("Invalid socket\n");
+    SOCKET_T socket = socket_create();
+    if(socket == 0) {
+        fprintf(stderr, "Failed to create socket\n");
         return 1;
     }
 
-    struct sockaddr_in clientService;
-    clientService.sin_family = AF_INET;
-    clientService.sin_addr.s_addr = inet_addr(HOST);
-    clientService.sin_port = htons(PORT);
-
-    iResult = connect(s, (SOCKADDR *)&clientService, sizeof(clientService));
-    if(iResult == SOCKET_ERROR) {
-        printf("Failed to connect\n");
+    if(socket_connect(socket, HOST, PORT) < 0) {
+        fprintf(stderr, "Failed to connect socket\n");
         return 1;
     }
 
     printf("Connected!\n");
 
     // Put code here!
+
+    if(socket_quit(socket) != 0) {
+        fprintf(stderr, "Socket finalization failed\n");
+        return 1;
+    }
 
     return 0;
 }
