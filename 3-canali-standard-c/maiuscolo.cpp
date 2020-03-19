@@ -4,7 +4,6 @@
 using namespace std;
 char c[30];
 char z[30];
-int l;
 
 
 int main() {
