@@ -1,6 +1,5 @@
 #include <iostream>
 #include <stdio.h>
-#include <string.h>
 
 using namespace std;
 char c[30];
@@ -16,10 +15,9 @@ int main() {
     printf("Inserire la frase da convertire in maiusolo\n"); 
     printf("Massimo 30 caratteri\n"); 
     gets(c);
-    l = strlen(c);
     
     
-    for(int i=0;i<l;i++){
+    for(int i=0;i<30;i++){
         z[i]=char(toupper(c[i]));
         printf ("%c",z[i]);
     }
