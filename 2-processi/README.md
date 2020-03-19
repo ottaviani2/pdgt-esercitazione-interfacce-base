@@ -106,7 +106,7 @@ Trovare il file più piccolo presente in questa cartella.
 ls -S
 
 l'ultimo file è il più piccolo
-README.md`
+README.md
 ```
 
 ### 4. Lista delle domande
